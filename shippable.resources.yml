@@ -23,6 +23,13 @@ resources:
     flags:
       - dv
 
+  - name: dv-scaler
+    type: replicas
+    version:
+      count: 1
+    flags:
+      - replicas
+
   - name: box-image
     type: image
     integration: deepika-docker
@@ -50,66 +57,23 @@ resources:
       memory: 64
       cpuShares: 512
 
-  - name: env-prod
-    type: cluster
-    integration: deepika-ecs
-    pointer:
-      sourceName : "prod-aws" #name of the cluster we are deploying
-      region: "us-east-1"
-
   - name: env-test
     type: cluster
     integration: deepika-ecs
     pointer:
-      sourceName : "test-aws" #name of the cluster we are deploying
-      region: "us-east-1"
+      sourceName : "testCL" #name of the cluster we are deploying
+      region: "us-west-2"
 
-  - name: box-scaler
-    type: replicas
-    version:
-      count: 1
-    flags:
-      - replicas
-
-  - name: env-dcl
+  - name: env-ddc
     type: cluster
-    integration: deepika-dcl
+    integration: deepika-ddc
     pointer:
      sourceName : "docker-cloud-node" #name of the cluster we are deploying
-
-  - name: env-gke
-    type: cluster
-    integration: deepika-gke
-    pointer:
-      sourceName: "sid-test-gke-cluster-1" #name of the cluster we are deploying.
-      region: "us-central1-b"
 
   - name: version-resource
     type: version
     seed:
       versionName: "0.0.1-beta"
-
-  - name: env-tripub
-    type: cluster
-    integration: deepika-tri
-    pointer:
-      region: "us-east-1"
-    flags:
-      - tripub
-
-  - name: box-tripub-opts
-    type: dockerOptions
-    version:
-      memory: 128
-      #Triton has standard values for memory 128,512 etc.
-      #If non standard values is given in the memory, it chooses the closest
-      #standard memory value. Triton also uses this value to choose the plan
-      #and cpu-shares
-      publishAllPorts : true
-      #publishAllPorts assigns a public ip to the container and gives endpoint
-      #for accessing the exposed ports.
-    flags:
-      - tripub
 
   - name: infra-repo
     type: gitRepo
@@ -132,14 +96,26 @@ resources:
     pointer:
       recipients:
         - "#deepika-test"
-        
+
   - name: myEmail
     type: notification
     pointer:
       method: email
-      recipients: 
+      recipients:
         -  "deepika@shippable.com"
 
-  - name: slackIntegration
+  - name: dockerIntegration
     type: integration
-    integration: slack
+    integration: deepika-docker
+
+  - name: dv-lb-ecs
+    type: cluster
+    integration: deepika-ecs
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: dv-loadb
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
