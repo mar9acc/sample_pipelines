@@ -35,6 +35,8 @@ resources:
     integration: deepika-docker
     pointer:
       sourceName: "aye0aye/box"
+    seed:
+      versionName: "master.35"
 
   - name: box-params
     type: params
