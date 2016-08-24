@@ -25,6 +25,7 @@ jobs:
     steps:
       - IN: env-test
       - OUT: dv-image
+        pull: false
       - TASK: managed
         deployMethod: upgrade
     on_failure:
