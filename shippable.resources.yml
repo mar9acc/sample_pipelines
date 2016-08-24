@@ -79,7 +79,7 @@ resources:
     type: gitRepo
     integration: deepika-git
     pointer:
-      sourceName: deepikasl/sample_infra_terraform
+      sourceName: deepikab93/sample_infra_terraform
       branch: master
 
   # This time resource posts new versions for it, every 2 minutes
@@ -108,14 +108,3 @@ resources:
     type: integration
     integration: deepika-docker
 
-  - name: dv-lb-ecs
-    type: cluster
-    integration: deepika-ecs
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
-
-  - name: dv-loadb
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
