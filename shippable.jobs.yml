@@ -24,12 +24,7 @@ jobs:
       - NOTIFY: slackNotification
     steps:
       - IN: dv-man
-      - IN: dv-lb-ecs
-      - IN: dv-loadb
-        applyTo:
-          - manifest: dv-man # it can only apply to one manifest
-            image: dv-image # it can only apply to one image in the manifest
-            port: 80
+      - IN: env-test
       - TASK: managed
         deployMethod: upgrade
     on_failure:
@@ -74,7 +69,6 @@ jobs:
       - IN: env-test
       - IN: env-ddc
       - IN: version-resource
-      - IN: nightly
       - IN: dockerIntegration
       - IN: dv-scaler
       - OUT: box-image
@@ -82,8 +76,7 @@ jobs:
         - script: sudo apt-get install tree
         - script: tree -F IN
         - script: tree -F OUT
-        - script: cat ./IN
     on_success:
       - script: echo 'This block executes after TASK section executes successfully'
-      - NOTIFY: slackNotifcation
+      - NOTIFY: slackNotification
       - NOTIFY: myEmail
