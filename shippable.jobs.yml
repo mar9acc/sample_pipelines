@@ -40,6 +40,9 @@ jobs:
       - TASK: managed
     flags:
       - box
+    seed:
+      versionName: "master.98"
+    
 
   - name: multi-manifest
     type:  deploy
