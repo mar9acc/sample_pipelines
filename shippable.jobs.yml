@@ -25,7 +25,7 @@ jobs:
     steps:
       - IN: dv-image
         pull: false
-        versionName: latest
+        versionName: i3#%^*
         versionNumber: 1
       - IN: env-test
       - TASK: managed
