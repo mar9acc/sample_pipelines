@@ -25,8 +25,8 @@ jobs:
     steps:
       - IN: dv-image
         pull: false
-        versionName: i3#%^*
-        versionNumber: 1
+        versionName: latest
+        versionNumber: 190
       - IN: env-test
       - TASK: managed
         deployMethod: upgrade
