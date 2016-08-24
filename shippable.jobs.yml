@@ -26,6 +26,7 @@ jobs:
       - IN: dv-image
         pull: false
         versionName: latest
+        versionNumber: 1
       - IN: env-test
       - TASK: managed
         deployMethod: upgrade
