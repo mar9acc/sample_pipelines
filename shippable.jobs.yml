@@ -35,10 +35,9 @@ jobs:
   - name: box-man
     type: manifest
     steps:
-      - IN: box-image
-        pull: false
       - IN: box-opts
       - IN: box-params
+      - OUT: box-image
       - TASK: managed
     flags:
       - box
