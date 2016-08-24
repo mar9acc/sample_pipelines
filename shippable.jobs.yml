@@ -25,6 +25,8 @@ jobs:
     steps:
       - IN: env-test
       - OUT: dv-image
+        versionName: latest
+        versionNumber: 0
         pull: false
       - TASK: managed
         deployMethod: upgrade
