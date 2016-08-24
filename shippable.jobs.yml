@@ -23,7 +23,9 @@ jobs:
     on_start:
       - NOTIFY: slackNotification
     steps:
-      - IN: dv-man
+      - IN: dv-image
+        pull: false
+        versionName: latest
       - IN: env-test
       - TASK: managed
         deployMethod: upgrade
