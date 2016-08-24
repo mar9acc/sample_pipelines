@@ -37,7 +37,6 @@ jobs:
         pull: false
       - IN: box-opts
       - IN: box-params
-        versionName: "master.28"
       - TASK: managed
     flags:
       - box
