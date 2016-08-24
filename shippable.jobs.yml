@@ -25,7 +25,6 @@ jobs:
     steps:
       - IN: dv-image
         pull: false
-        versionName: latest
         versionNumber: 190
       - IN: env-test
       - TASK: managed
