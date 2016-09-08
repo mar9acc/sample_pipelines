@@ -77,9 +77,9 @@ resources:
 
   - name: infra-repo
     type: gitRepo
-    integration: deepika-git
+    integration: deepika-gl
     pointer:
-      sourceName: deepikasl/sample_infra_terraform
+      sourceName: deepikab93/VT1
       branch: master
 
   # This time resource posts new versions for it, every 2 minutes
