@@ -79,7 +79,7 @@ resources:
     type: gitRepo
     integration: deepika-git
     pointer:
-      sourceName: deepikab93/sample_infra_terraform
+      sourceName: deepikasl/sample_infra_terraform
       branch: master
 
   # This time resource posts new versions for it, every 2 minutes
