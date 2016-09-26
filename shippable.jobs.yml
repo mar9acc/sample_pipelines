@@ -23,7 +23,7 @@ jobs:
     on_start:
       - NOTIFY: slackNotification
     steps:
-      - IN: dv-image
+      - IN: dv-man
         versionName: latest
         versionNumber: 0
         pull: false
