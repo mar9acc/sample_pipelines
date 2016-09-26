@@ -7,7 +7,7 @@ resources:
     seed:
       versionName: prod.11
     
-  - name: ddc-param2
+  - name: ddc-param3
     type: params
     version:
       params:
