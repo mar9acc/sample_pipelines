@@ -23,6 +23,7 @@ jobs:
     on_start:
       - NOTIFY: slackNotification
     steps:
+      - IN: env-test
       - IN: dv-man
       - TASK: managed
         deployMethod: upgrade
