@@ -75,9 +75,9 @@ resources:
 
   - name: infra-repo
     type: gitRepo
-    integration: deepika-gl
+    integration: deepika-git
     pointer:
-      sourceName: deepikab93/VT1
+      sourceName: deepikasl/VT1
       branch: master
 
   # This time resource posts new versions for it, every 2 minutes
