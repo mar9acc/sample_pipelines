@@ -12,7 +12,7 @@ resources:
     version:
       params:
         FOO: foo
-        secure: ZELSrCizrcPvcBpCyHZfpovfE5r1JlMl2qzYGex+Wxhx8qerTkrCJHJcM5lRatO9+n9FwRtYfXc1qlsCxVX/jPJR0kewCe3/5Inby4P+BYwegF5Pz7nFtdcyjRvpIdIVDSHx05J/ycd8TQPRjJyqHaQ8Ht3/kUF2LyfFcBf0UTJv2J/7ffIeACqwl+a/XFRG/Zz2W8V7FUxzo39P+/35g88GfjqUUIm6I+gzImOVdsdkCV9EO7OfVQ0fSR1PytmzPcEL4ItOOzLj0iNMGdbyJ88Xg32guoBczu+vUteTeeDNwK+KuY6FZwwxzhE+x9D7NmPckQ+b0fIbgAImpT4zkQ==
+        secure: D1oHYtKyQrQ/6hAUytwgI1As88fBAGYhed+G7n63Jpcsp3M9RjsVANmX6bpPozVowpU/8HoyBpxGn4WWIpX0i6tR+8ndoorU2Zn1DolKVl+ZFXEG/vvGdKXSrYLHFmx71TMzzv8xK+1zMPdQwrPYz2OqR5WGTMaliWHIHO6rlWKT4WjYv4xCpFSQKOi6kOXQJBuW04RcJx7163Yr4rdCwgOvGV4AQrShGVECRoxbTno8ASYfCCPEVnxBvhtrOS9aPledHtSTXvnmkqL5/GBH9J63fs2RnjvqjcvjHEoPovE6ai+OhUDu5ESNnFr6UigS/jzeElM+ib87WICYCrgbfw==
   
   - name: ddc-cluster
     type: cluster
