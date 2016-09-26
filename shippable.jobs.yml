@@ -1,82 +1,15 @@
 jobs:
-  - name: dv-man
+  - name: nginx-manifest-11
     type: manifest
     steps:
-      - IN: dv-image
-        pull: false
-        versionName: latest
-        versionNumber: 0
-      - IN: dv-params
-        applyTo:
-          - dv-image
-      - IN: dv-opts
-      - IN: trigger-dv-man
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
-    flags:
-      - dv
+      - IN: serial-trigger
+      - IN: nginx-image-prod11
+      - IN: ddc-param3
 
-  - name: dv-dep-test
+  - name: deploy-11
     type: deploy
-    on_start:
-      - NOTIFY: slackNotification
     steps:
-      - IN: env-test
-      - IN: dv-man
+      - IN: nginx-manifest-11
+      - IN: ddc-cluster
       - TASK: managed
         deployMethod: upgrade
-    on_failure:
-      - NOTIFY: slackNotification
-
-  - name: box-man
-    type: manifest
-    steps:
-      - IN: box-opts
-      - IN: box-params
-      - OUT: box-image
-      - TASK: managed
-    flags:
-      - box
-    
-
-  - name: multi-manifest
-    type:  deploy
-    steps:
-      - IN: box-man
-      - IN: dv-man
-      - IN: env-test
-
-  - name: release-one
-    type: release
-    steps:
-      - IN: version-resource
-      - IN: dv-man
-      - TASK: managed
-        bump: major
-
-  - name: infra-provision
-    type: runSh
-    steps:
-      - IN: dv-man
-      - IN: dv-dep-test
-      - IN: release-one
-      - IN: infra-repo
-      - IN: dv-image
-      - IN: dv-opts
-      - IN: dv-params
-      - IN: env-test
-      - IN: env-ddc
-      - IN: version-resource
-      - IN: dockerIntegration
-      - IN: dv-scaler
-      - OUT: box-image
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: tree -F OUT
-    on_success:
-      - script: echo 'This block executes after TASK section executes successfully'
-      - NOTIFY: slackNotification
-      - NOTIFY: myEmail
