@@ -19,9 +19,7 @@ resources:
     type: params
     version:
       params:
-        MONGO_API_URL: "localhost:28017"
-    flags:
-      - dv
+        secure: f/b4IDINzekRgRJeGInIrUCHnxCcWHqtdCe1hYVYu6IYvzZqSAvddz/Cc6Q0UC/GVxY+F1aPu5QJNs8GKjXFPmgF/BRD4kgjKWjfwzplGYOQrOaAE3CUHMJPjZOBGukZY0A9xeagDEAY53r2M3ML3lx8GNNjiVBGrWIPtHJeOFFy23pxQyWEznG9zKjBr+vmsN8WygHwmjQTZFrnredeMLDe4iTX0KHEBXJcmOJ/TPFXlE/Vri9pgvGoQIsWO/p+wb+CYBrqztbi3b4gcBWFaWEfEL0zqh6TgAxTsipVCgfZcrPnxpMvYoELakBwfA90LWvooBkPkE3FY6yzovi66w==
 
   - name: dv-scaler
     type: replicas
