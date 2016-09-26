@@ -5,14 +5,14 @@ resources:
     pointer:
       sourceName: "ankul/nginx"
     seed:
-      versionName: prod.11
+      versionName: prod.14
     
   - name: ddc-param3
     type: params
     version:
       params:
         FOO: foo
-        secure: l3H3OkMZKaXbJZlbtLO5RSPO8jGGn8DYF8UTw++2ZZ+AHxmDjYalHBg4BmOMPWKKi51WAGwKUr48nLcLWi04Q/K553D5hyMTb1thnExJySJUzfDtaDGFrrwyANflng5HZYZWDIkNuDqm2UpsevanXZx/76fRaD0W8s/FFf7Ks7aHQ/rN4j5mRELsU5Vrrrw91WTys8RpgIqol3kbIE31+RNk/SWHNi1vetjSQlYaqXeClQt/9EipjOk7y1RzttFixUWjeGxL0RfKI3sS28Hi0rApUfxYrrH2ertzbv7qJBzRpGhhE+MKB4kQG0bqGK0gzcA7c+nFzagqaD8SmAZB0Q==
+        secure: H/rdphu2PBWUqb2gK3BpqdtYDhDOjViDJn9cRkDNQp4NG7CXvEof1gGsmRHHcCpPOV7bJbN5OjLwe+DEzSrzH5CXHMwJb0DnZ4dw3egxCA9QwKj9WomWjvdNYj2dGGH0BhiMhmR0L+FQyJaug6wwwbwWE0jtoMj3KJOKK27jtzSieSACscdzznZCnPr/CkmvJb2xQhstYpazX5ZGHdbKNKCw6/wQmnwB/AscDvbCGU2HxB5C6CtVqjp732qbEOIGZ0Dv8euGB5MchFgsksQHIC7MZfay4B9/ZhBIjdrkyadW3gfeR81OvdD3IGVHVLGDOkTbh8RwEeU4AkVcIzSHLQ==
   
   - name: ddc-cluster
     type: cluster
