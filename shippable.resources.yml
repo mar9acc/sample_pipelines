@@ -12,7 +12,6 @@ resources:
     version:
       params:
         FOO: foo
-        secure: D1oHYtKyQrQ/6hAUytwgI1As88fBAGYhed+G7n63Jpcsp3M9RjsVANmX6bpPozVowpU/8HoyBpxGn4WWIpX0i6tR+8ndoorU2Zn1DolKVl+ZFXEG/vvGdKXSrYLHFmx71TMzzv8xK+1zMPdQwrPYz2OqR5WGTMaliWHIHO6rlWKT4WjYv4xCpFSQKOi6kOXQJBuW04RcJx7163Yr4rdCwgOvGV4AQrShGVECRoxbTno8ASYfCCPEVnxBvhtrOS9aPledHtSTXvnmkqL5/GBH9J63fs2RnjvqjcvjHEoPovE6ai+OhUDu5ESNnFr6UigS/jzeElM+ib87WICYCrgbfw==
   
   - name: ddc-cluster
     type: cluster
