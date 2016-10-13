@@ -27,6 +27,20 @@ resources:
       params:
         FOO1: foo1
   
+  - name: dv-opts
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 256
+      portMappings:
+        - "80:80"
+  
+  - name: box-opts
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 512
+  
   - name: ddc-cluster
     type: cluster
     integration: "deepika-ddc"
