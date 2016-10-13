@@ -18,8 +18,6 @@ jobs:
     steps:
       - IN: serial-trigger
       - IN: nginx-image-prod11
-        pull: false
-        versionNumber: 1000
       - IN: ddc-param3
         applyTo:
           - dv-image
