@@ -19,8 +19,8 @@ jobs:
       - IN: serial-trigger
       - IN: nginx-image-prod11
         pull: false
-        versionName: invalid
-        versionNumber: 0
+        versionName: prod.14
+        versionNumber: 1000
       - IN: release-one
       - IN: box-opts
       - IN: dv-opts
