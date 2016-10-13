@@ -19,7 +19,6 @@ jobs:
       - IN: serial-trigger
       - IN: nginx-image-prod11
         pull: false
-        versionName: prod.14
         versionNumber: 1000
       - IN: release-one
       - IN: box-opts
