@@ -20,7 +20,9 @@ jobs:
       - IN: nginx-image-prod11
         pull: false
         versionNumber: 1000
-      - IN: release-one
+      - IN: ddc-param3
+        applyTo:
+          - dv-image
       - IN: box-opts
       - IN: dv-opts
       
