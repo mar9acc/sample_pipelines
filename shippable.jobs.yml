@@ -9,7 +9,7 @@ jobs:
     type: release
     steps:
       - IN: version-resource
-      - IN: dv-man
+      - IN: nginx-manifest-2
       - TASK: managed
         bump: major
       
