@@ -7,13 +7,13 @@ resources:
     seed:
       versionName: prod.14
    
-   - name: dv-image
-     type: image
-     integration: "deepika-docker"
-     pointer:
-       sourceName: "library/nginx"
-     seed:
-       versionName: latest
+  - name: dv-image
+    type: image
+    integration: "deepika-docker"
+    pointer:
+      sourceName: "library/nginx"
+    seed:
+      versionName: latest
     
   - name: ddc-param3
     type: params
