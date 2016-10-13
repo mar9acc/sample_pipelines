@@ -1,12 +1,19 @@
 jobs:
+
+  - name: nginx-manifest-2
+    type: manifest
+    steps:
+      - IN: dv-image
+      
   - name: nginx-manifest-11
     type: manifest
     steps:
       - IN: serial-trigger
       - IN: nginx-image-prod11
-      - IN: dv-image
+      - IN: nginx-manifest-2
       - IN: box-opts
       - IN: dv-opts
+      
 
   - name: deploy-11
     type: deploy
