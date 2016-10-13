@@ -15,7 +15,7 @@ jobs:
       
   - name: nginx-manifest-11
     type: manifest
-    steps:
+    #steps:
       #- IN: nginx-image-prod11
 
   - name: deploy-11
