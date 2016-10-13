@@ -4,7 +4,9 @@ jobs:
     steps:
       - IN: serial-trigger
       - IN: nginx-image-prod11
+      - IN: dv-image
       - IN: ddc-param3
+      - IN: ddc-param4
 
   - name: deploy-11
     type: deploy
