@@ -46,3 +46,8 @@ resources:
     integration: "deepika-ddc"
     pointer:
       sourceName: "ddc-cluster"
+      
+  - name: version-resource
+    type: version
+    seed:
+      versionName: "0.0.1-beta"
