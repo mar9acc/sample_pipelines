@@ -5,12 +5,20 @@ jobs:
     steps:
       - IN: dv-image
       
+  - name: release-one
+    type: release
+    steps:
+      - IN: version-resource
+      - IN: dv-man
+      - TASK: managed
+        bump: major
+      
   - name: nginx-manifest-11
     type: manifest
     steps:
       - IN: serial-trigger
       - IN: nginx-image-prod11
-      - IN: nginx-manifest-2
+      - IN: release-one
       - IN: box-opts
       - IN: dv-opts
       
