@@ -18,10 +18,8 @@ jobs:
     steps:
       - IN: serial-trigger
       - IN: nginx-image-prod11
-      - IN: nginx-manifest-2
-        switch: off
-      - IN: box-opts
       - IN: dv-opts
+      - OUT: nginx-manifest-2
       
 
   - name: deploy-11
