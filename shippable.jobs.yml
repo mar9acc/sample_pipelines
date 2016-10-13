@@ -19,7 +19,7 @@ jobs:
       - IN: serial-trigger
       - IN: nginx-image-prod11
       - IN: dv-opts
-      - OUT: nginx-manifest-2
+      - OUT: dv-image
       
 
   - name: deploy-11
