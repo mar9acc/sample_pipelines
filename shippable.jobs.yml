@@ -16,10 +16,6 @@ jobs:
   - name: nginx-manifest-11
     type: manifest
     steps:
-      - IN: serial-trigger
-      - IN: nginx-image-prod11
-      - IN: dv-opts
-      - OUT: dv-image
       
 
   - name: deploy-11
