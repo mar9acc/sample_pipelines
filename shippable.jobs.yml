@@ -18,9 +18,8 @@ jobs:
     steps:
       - IN: serial-trigger
       - IN: nginx-image-prod11
-      - IN: ddc-param3
-        applyTo:
-          - dv-image
+      - IN: nginx-manifest-2
+        switch: off
       - IN: box-opts
       - IN: dv-opts
       
