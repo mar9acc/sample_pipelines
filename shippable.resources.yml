@@ -57,4 +57,4 @@ resources:
     integration: deepika-git
     pointer:
       sourceName: deepikasl/VT1
-      #branch: master
+      branch: @1324324master
