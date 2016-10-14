@@ -56,5 +56,5 @@ resources:
     type: gitRepo
     integration: deepika-git
     pointer:
-      #sourceName: deepikasl/VT1
+      sourceName: deepikasl/VT12
       branch: master
