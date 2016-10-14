@@ -13,10 +13,11 @@ jobs:
       - TASK: managed
         bump: major
       
-  #- name: nginx-manifest-11
-   # type: manifest
-    #steps:
-      #- IN: nginx-image-prod11
+  - name: nginx-manifest-11
+    type: manifest
+    steps:
+      - IN: nginx-image-prod11
+      - TASK: managed
 
   - name: deploy-11
     type: deploy
