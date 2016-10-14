@@ -52,21 +52,9 @@ resources:
     seed:
       versionName: "0.0.1-beta"
      
-  - name: version-resource
-    type: version
-    seed:
-      versionName: "!$76db78"
-      
-  - name: nightly
-    type: time
-    seed:
-      interval: "*/2 * * * *"
-    flags:
-      - nightly
-      
-  - name: nightly
-    type: time
-    seed:
-      interval: "*/4 * * * *"
-    flags:
-      - nightly
+  - name: infra-repo
+    type: gitRepo
+    integration: deepika-git
+    pointer:
+      sourceName: deepikasl/VT1
+      branch: master
