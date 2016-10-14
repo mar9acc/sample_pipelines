@@ -48,6 +48,6 @@ resources:
       sourceName: "ddc-cluster"
       
   - name: version-resource
-    #type: version
-    seed:
-      versionName: "0.0.1-beta"
+    type: version
+    #seed:
+     # versionName: "0.0.1-beta"
