@@ -65,5 +65,5 @@ resources:
     pointer:
       sourceName: deepikasl/VT1
       branch: "master"
-      buildOnCommit: false
+      buildOnCommit: true
       buildOnPullRequest: false
