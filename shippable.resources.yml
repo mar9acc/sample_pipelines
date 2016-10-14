@@ -52,7 +52,7 @@ resources:
     seed:
       versionName: "0.0.1-beta"
      
-  - name: infra-repo
+  - name: infra-repo3
     type: gitRepo
     integration: deepika-git
     pointer:
