@@ -49,5 +49,5 @@ resources:
       
   - name: version-resource
     type: version
-    #seed:
+    seed:
      # versionName: "0.0.1-beta"
