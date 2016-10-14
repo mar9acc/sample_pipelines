@@ -59,7 +59,7 @@ resources:
       
   - name: nightly
     type: time
-    #seed:
+    seed:
      # interval: "*/2 * * * *"
     flags:
       - nightly
