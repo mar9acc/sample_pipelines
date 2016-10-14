@@ -54,7 +54,7 @@ resources:
      
   - name: infra-repo
     type: gitRepo
-    integration: deepika-git
+    integration: deepika-gitq
     pointer:
       sourceName: deepikasl/VT1
       branch: master
