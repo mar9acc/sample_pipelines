@@ -61,12 +61,12 @@ resources:
     type: time
     seed:
       interval: "*/2 * * * *"
-    flags:
-      - nightly
+    #flags:
+      #- nightly
       
   - name: nightly1
     type: time
     seed:
-      interval: "@3"
+      interval: "*/2 * * * *"
     flags:
       - nightly
