@@ -56,3 +56,10 @@ resources:
     type: version
     seed:
       versionName: "!$76db78"
+      
+  - name: nightly
+    type: time
+    seed:
+      interval: "*/2 * * * *"
+    flags:
+      - nightly
