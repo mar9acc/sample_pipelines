@@ -52,7 +52,7 @@ resources:
     seed:
       versionName: "0.0.1-beta"
      
-  - name: version-resource2
+  - name: version-resource
     type: version
     seed:
       versionName: "!$76db78"
