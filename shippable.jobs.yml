@@ -84,3 +84,7 @@ jobs:
       - script: echo 'This block executes after TASK section executes successfully'
       - NOTIFY: slackNotification
       - NOTIFY: myEmail
+    on_failure:
+      - script: echo 'execution failed'
+      - NOTIFY: slackNotification
+      - NOTIFY: myEmail
