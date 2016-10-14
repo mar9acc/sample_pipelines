@@ -66,4 +66,4 @@ resources:
       sourceName: deepikasl/VT1
       branch: "master"
       buildOnCommit: true
-      buildOnPullRequest: false
+      buildOnPullRequest: true
