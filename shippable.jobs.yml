@@ -13,8 +13,10 @@ jobs:
       - IN: trigger-dv-man
     on_success:
       - NOTIFY: slackNotification
+      - NOTIFY: myEmail
     on_failure:
       - NOTIFY: slackNotification
+      - NOTIFY: myEmail
     flags:
       - dv
 
@@ -22,6 +24,7 @@ jobs:
     type: deploy
     on_start:
       - NOTIFY: slackNotification
+      - NOTIFY: myEmail
     steps:
       - IN: env-test
       - IN: dv-man
@@ -29,6 +32,7 @@ jobs:
         deployMethod: upgrade
     on_failure:
       - NOTIFY: slackNotification
+      - NOTIFY: myEmail
 
   - name: box-man
     type: manifest
