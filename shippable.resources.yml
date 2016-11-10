@@ -26,6 +26,6 @@ resources:
       workingDir: "/makemeworking"
       publishAllPorts: true
       cmd:
-        - "node"
-        - "job.js"
+        #- "node"
+        #- "job.js"
         - /bin/sh -c while true; do echo hello world; sleep 1; done
