@@ -5,8 +5,8 @@ resources:
     pointer:
       sourceName: "shubhankit/sshubh"
       #isPull: true
-    #seed:
-     # versionName: "driftking"
+    seed:
+      versionName: "none"
 
 # # TEST resources
 
