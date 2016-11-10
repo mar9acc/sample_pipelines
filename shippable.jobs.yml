@@ -5,7 +5,7 @@ jobs:
 # ################################
 #
 # # generate manifest
-  - name: dev-manifest
+  - name: dev-manifest-1
     type: manifest
     steps:
       - IN: docker-image
@@ -16,6 +16,6 @@ jobs:
   - name: deploy-to-dev
     type: deploy
     steps:
-      - IN: dev-manifest
+      - IN: dev-manifest-1
       - IN: joyent-dev-sw1
       - TASK: managed
