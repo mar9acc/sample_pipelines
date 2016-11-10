@@ -21,8 +21,10 @@ resources:
   - name: docker-options
     type: dockerOptions
     version:
-      labels:
-        com.joyent.package: g4-highcpu-128M
+      memory: 128
+      user: "driftking"
+      workingDir: "/makemeworking"
+      publishAllPorts: true
       cmd:
-       # - /bin/sh -c while true; do echo hello world; sleep 1; done
-        - echo "true"
+        - "node"
+        - "job.js"
