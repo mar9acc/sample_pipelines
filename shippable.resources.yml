@@ -3,8 +3,8 @@ resources:
     type: image
     integration: deepika-docker
     pointer:
-      sourceName: "ubuntu"
-      isPull: true
+      sourceName: "library/nginx"
+      #isPull: true
     seed:
       versionName: "latest"
 
