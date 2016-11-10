@@ -15,7 +15,7 @@ resources:
     type: cluster
     integration: deepika-triton
     pointer:
-      region: "us-west-1"
+      region: "us-east-2"
 
 # # Docker Image Options
   - name: docker-options
