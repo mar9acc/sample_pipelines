@@ -28,4 +28,4 @@ resources:
       cmd:
         #- "node"
         #- "job.js"
-        - /bin/sh -c while true; do echo hello world; sleep 1; done
+        - "/bin/sh -c while true; do echo hello world; sleep 1; done"
