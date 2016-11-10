@@ -3,10 +3,10 @@ resources:
     type: image
     integration: deepika-docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "shubhankit/sshubh"
       #isPull: true
-    seed:
-      versionName: "driftking"
+    #seed:
+     # versionName: "driftking"
 
 # # TEST resources
 
