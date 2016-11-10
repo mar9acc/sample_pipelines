@@ -25,4 +25,4 @@ resources:
       user: "driftking"
       workingDir: "/makemeworking"
       publishAllPorts: true
-      cmd: /bin/sh -c \"while true; do echo hello world; sleep 1; done\"
+      cmd: '/bin/sh -c \\\"while true; do echo hello world; sleep 1; done\\\"'
