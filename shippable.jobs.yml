@@ -9,7 +9,7 @@ jobs:
     type: manifest
     steps:
       - IN: docker-image
-      #- IN: docker-options
+      - IN: docker-options
       - TASK: managed
 
 # # TEST deployment to Triton
