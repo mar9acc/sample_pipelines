@@ -57,7 +57,6 @@ jobs:
     steps:
       - IN: version-resource
       - IN: dv-man
-      - IN: inconsistent-test
       - TASK: managed
         bump: major
 
