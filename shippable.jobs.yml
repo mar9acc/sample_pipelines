@@ -13,10 +13,8 @@ jobs:
       - IN: trigger-dv-man
     on_success:
       - NOTIFY: slackNotification
-      - NOTIFY: myEmail
     on_failure:
       - NOTIFY: slackNotification
-      - NOTIFY: myEmail
     flags:
       - dv
 
@@ -24,15 +22,16 @@ jobs:
     type: deploy
     on_start:
       - NOTIFY: slackNotification
-      - NOTIFY: myEmail
     steps:
       - IN: env-test
-      - IN: dv-man
+      - OUT: dv-image
+        versionName: latest
+        versionNumber: 0
+        pull: false
       - TASK: managed
         deployMethod: upgrade
     on_failure:
       - NOTIFY: slackNotification
-      - NOTIFY: myEmail
 
   - name: box-man
     type: manifest
@@ -82,9 +81,5 @@ jobs:
         - script: tree -F OUT
     on_success:
       - script: echo 'This block executes after TASK section executes successfully'
-      - NOTIFY: slackNotification
-      - NOTIFY: myEmail
-    on_failure:
-      - script: echo 'execution failed'
       - NOTIFY: slackNotification
       - NOTIFY: myEmail
