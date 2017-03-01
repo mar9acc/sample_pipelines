@@ -64,6 +64,8 @@ jobs:
       - IN: dv-man
       - IN: release-one
       - IN: infra-repo
+      - TASK:
+        - script: ls
     on_success:
       - NOTIFY: slackNotification
       - NOTIFY: myEmail
