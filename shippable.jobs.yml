@@ -64,7 +64,6 @@ jobs:
       - IN: dv-man
       - IN: release-one
       - IN: infra-repo
-      - OUT: box-image
     on_success:
       - NOTIFY: slackNotification
       - NOTIFY: myEmail
