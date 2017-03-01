@@ -62,23 +62,9 @@ jobs:
     type: runSh
     steps:
       - IN: dv-man
-      - IN: dv-dep-test
       - IN: release-one
       - IN: infra-repo
-      - IN: dv-image
-      - IN: dv-opts
-      - IN: dv-params
-      - IN: env-test
-      - IN: env-ddc
-      - IN: version-resource
-      - IN: dockerIntegration
-      - IN: dv-scaler
       - OUT: box-image
-      - TASK:
-        - script: sudo apt-get install tree
-        - script: tree -F IN
-        - script: tree -F OUT
     on_success:
-      - script: echo 'This block executes after TASK section executes successfully'
       - NOTIFY: slackNotification
       - NOTIFY: myEmail
