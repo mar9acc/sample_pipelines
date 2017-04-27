@@ -77,7 +77,7 @@ resources:
     type: gitRepo
     integration: deepika-git
     pointer:
-      sourceName: deepikasl/VT1
+      sourceName: deepikasl/VT2
       branch: master
 
   # This time resource posts new versions for it, every 2 minutes
