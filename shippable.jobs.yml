@@ -37,6 +37,7 @@ jobs:
     steps:
       - IN: box-opts
       - IN: box-params
+      - IN: test
       - OUT: box-image
       - TASK: managed
     flags:
