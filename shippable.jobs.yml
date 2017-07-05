@@ -1,72 +1,60 @@
 jobs:
-  - name: dv-man
+  - name: base_manifest
     type: manifest
     steps:
-      - IN: dv-image
-        pull: false
-        versionName: latest
-        versionNumber: 0
-      - IN: dv-params
-        applyTo:
-          - dv-image
-      - IN: dv-opts
-      - IN: trigger-dv-man
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
-    flags:
-      - dv
+      - IN: nginx_prod_6
 
-  - name: dv-dep-test
-    type: deploy
-    on_start:
-      - NOTIFY: slackNotification
-    steps:
-      - IN: env-test
-        versionName: latest
-        versionNumber: 0
-        pull: false
-      - TASK: managed
-        deployMethod: upgrade
-    on_failure:
-      - NOTIFY: slackNotification
-
-  - name: box-man
+  - name: failed_manifest
     type: manifest
     steps:
-      - IN: box-opts
-      - IN: box-params
-      - IN: test
-      - OUT: box-image
-      - TASK: managed
-    flags:
-      - box
-    
-
-  - name: multi-manifest
-    type:  deploy
+      - IN: base_manifest
+      
+      
+  - name: skipped_manifest
+    type: manifest
     steps:
-      - IN: box-man
-      - IN: dv-man
-      - IN: env-test
-
-  - name: release-one
-    type: release
-    steps:
-      - IN: version-resource
-      - IN: dv-man
-      - TASK: managed
-        bump: major
-
-  - name: infra-provision
+      - IN: nginx_prod_6      
+      
+  - name: cancelled_runSh
     type: runSh
     steps:
-      - IN: dv-man
-      - IN: release-one
-      - IN: infra-repo
       - TASK:
-        - script: ls
+        - script: sudo apt-get install tree
+        - script: tree -F IN
+        - script: sleep 60
     on_success:
-      - NOTIFY: slackNotification
-      - NOTIFY: myEmail
+      - script: echo "successfully completed"      
+      
+  - name: inconsistent_manifest
+    type: manifest
+    steps:
+      - IN: nginx_prod_7  
+      
+  - name: unbuilt_manifest
+    type: manifest
+    steps:
+      - IN: nginx_prod_6       
+      
+  - name: success_manifest
+    type: manifest
+    steps:
+      - IN: nginx_prod_6     
+      
+      
+  - name: runSh-main
+    type: runSh
+    steps: 
+      - IN: nginx_prod_8
+      - OUT: nginx_prod_9      
+      - IN: failed_manifest 
+      - IN: skipped_manifest 
+      - IN: cancelled_runSh 
+      - IN: inconsistent_manifest 
+      - IN: unbuilt_manifest       
+      - IN: success_manifest       
+      - IN: sample_java_runCI
+      - IN: sample_node_runCI      
+      - TASK:
+        - script: echo "true"
+    on_success:
+      - script: echo "successfully completed"           
