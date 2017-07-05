@@ -1,108 +1,32 @@
 resources:
-  - name: dv-image
+  - name: nginx_prod_6
     type: image
     integration: deepika-docker
     pointer:
-      sourceName: "library/nginx"
+      sourceName: "ankul/nginx"
     seed:
-      versionName: latest
-
-  - name: dv-opts
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 256
-      portMappings:
-        - "80:80"
-
-  - name: dv-params
-    type: params
-    version:
-      params:
-        FOO: foo1
-
-  - name: dv-scaler
-    type: replicas
-    version:
-      count: 1
-    flags:
-      - replicas
-
-  - name: box-image
+      versionName: prod.6
+      
+  - name: nginx_prod_7
     type: image
     integration: deepika-docker
     pointer:
-      sourceName: "aye0aye/box"
+      sourceName: "ankul/nginx"
     seed:
-      versionName: "master.35"
-
-  - name: box-params
-    type: params
-    version:
-      params:
-        DB_HOST: "ds015700.mlab.com"
-        DB_NAME: "ayeaye"
-        DB_PORT: "15700"
-        DB_USERNAME: "aye0aye"
-        DB_PASSWORD: "aye0aye"
-        ENVIRONMENT: "test-aws"
-    flags:
-      - box
-
-  - name: box-opts
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 512
-
-  - name: env-test
-    type: cluster
-    integration: deepika-ecs
-    pointer:
-      sourceName : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
-
-  - name: env-ddc
-    type: cluster
-    integration: deepika-ddc
-    pointer:
-     sourceName : "docker-cloud-node" #name of the cluster we are deploying
-
-  - name: version-resource
-    type: version
-    seed:
-      versionName: "0.0.1-beta"
-
-  - name: infra-repo
-    type: gitRepo
-    integration: deepika-git
-    pointer:
-      sourceName: deepikasl/VT2
-      branch: master
-
-  # This time resource posts new versions for it, every 2 minutes
-  - name: nightly
-    type: time
-    seed:
-      interval: "*/2 * * * *"
-    flags:
-      - nightly
-
-  - name: slackNotification
-    type: notification
-    integration: deepika-slack
-    pointer:
-      recipients:
-        - "#deepika-test"
-
-  - name: myEmail
-    type: notification
-    pointer:
-      method: email
-      recipients:
-        -  "deepika@shippable.com"
-
-  - name: dockerIntegration
-    type: integration
+      versionName: prod.7
+      
+  - name: nginx_prod_8
+    type: image
     integration: deepika-docker
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.7
 
+  - name: nginx_prod_9
+    type: image
+    integration: deepika-docker
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.9
