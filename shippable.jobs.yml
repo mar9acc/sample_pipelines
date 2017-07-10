@@ -6,9 +6,6 @@ jobs:
         pull: false
         versionName: latest
         versionNumber: 0
-      - IN: dv-params
-        applyTo:
-          - dv-image
       - IN: dv-opts
       - IN: trigger-dv-man
     on_success:
@@ -35,9 +32,6 @@ jobs:
   - name: box-man
     type: manifest
     steps:
-      - IN: box-opts
-      - IN: box-params
-      - IN: test
       - OUT: box-image
       - TASK: managed
     flags:
@@ -54,17 +48,13 @@ jobs:
   - name: release-one
     type: release
     steps:
-      - IN: version-resource
-      - IN: dv-man
       - TASK: managed
         bump: major
 
   - name: infra-provision
     type: runSh
     steps:
-      - IN: dv-man
       - IN: release-one
-      - IN: infra-repo
       - TASK:
         - script: ls
         - script: echo $FOO
