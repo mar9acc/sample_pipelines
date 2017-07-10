@@ -67,6 +67,7 @@ jobs:
       - IN: infra-repo
       - TASK:
         - script: ls
+        - script: echo $FOO
     on_success:
       - NOTIFY: slackNotification
       - NOTIFY: myEmail
