@@ -11,7 +11,7 @@ resources:
     type: image
     integration: "deepika-docker"
     pointer:
-      sourceName: "library/ngin"
+      sourceName: "library/nginx"
     seed:
       versionName: latest
     
