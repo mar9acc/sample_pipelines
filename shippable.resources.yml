@@ -51,13 +51,6 @@ resources:
     type: version
     seed:
       versionName: "0.0.1-beta"
-     
-  - name: infra-repo3
-    type: gitRepo
-    integration: deepika-git
-    pointer:
-      sourceName: deepikasl/api
-      branch: "master"
 
   - name: infra-repo2
     type: gitRepo
