@@ -3,3 +3,8 @@ triggers:
     type: trigger
     version:
       counter: 2
+
+  - name: release-one-trigger
+    type: trigger
+    version:
+      counter: 0
