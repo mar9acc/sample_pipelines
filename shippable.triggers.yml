@@ -2,7 +2,7 @@ triggers:
   - name: nginx-manifest-2-trigger
     type: trigger
     version:
-      counter: 2
+      counter: 3
 
   - name: release-one-trigger
     type: trigger
