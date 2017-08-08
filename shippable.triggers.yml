@@ -1,5 +1,5 @@
 triggers:
-  - name: nginx-manifest-2
+  - name: nginx-manifest-2-trigger
     type: trigger
     version:
       counter: 1
