@@ -5,7 +5,6 @@ jobs:
     steps:
       #- IN: ddc-param3
       - IN: dv-image
-        versionNumber: 1290
       - IN: nginx-manifest-2-trigger
       
   - name: release-one
