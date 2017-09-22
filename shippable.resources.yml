@@ -39,7 +39,7 @@ resources:
     type: dockerOptions
     version:
       memory: 64
-      cpuShares: 512
+      cpuShares: 510
   
   - name: ddc-cluster
     type: cluster
