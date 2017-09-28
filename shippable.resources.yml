@@ -60,3 +60,7 @@ resources:
       branch: "master"
       #buildOnCommit: true
       buildOnPullRequest: true
+
+  - name: sshKeyIntegrations
+    type: integration
+    integration: deepika-ssh
