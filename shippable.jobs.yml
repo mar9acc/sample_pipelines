@@ -23,4 +23,9 @@ jobs:
       - IN: dv-man
       - IN: testSshKey
       - TASK:
-        - script: echo $TESTSSHKEY_INTEGRATION_NAME
+        - script: echo $TESTSSHKEY_NAME
+        - script: echo $TESTSSHKEY_INTEGRATION_PUBLICKEY
+        - script: echo $TESTSSHKEY_INTEGRATION_PRIVATEKEY
+        - script: echo $TESTSSHKEY_PUBLIC_KEY_PATH
+        - script: echo $TESTSSHKEY_PRIVATE_KEY_PATH
+        
