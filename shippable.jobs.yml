@@ -24,4 +24,4 @@ jobs:
       - IN: testSshKey
       - TASK:
         - script: ls
-        - script: echo $testSshKey_INTEGRATION_NAME
+        - script: echo $TESTSSHKEY_INTEGRATION_NAME
