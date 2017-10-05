@@ -13,6 +13,7 @@ jobs:
   - name: release-one
     type: release
     steps:
+      - IN: dv-man
       - TASK: managed
         bump: major
 
