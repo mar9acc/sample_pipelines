@@ -108,4 +108,4 @@ resources:
 
   - name: testSshKey
     type: integration
-    integration: test-sshKey
+    integration: old-ssh
