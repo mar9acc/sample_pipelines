@@ -106,3 +106,6 @@ resources:
     type: integration
     integration: deepika-docker
 
+  - name: testSshKey
+    type: integration
+    integration: test-sshKey
