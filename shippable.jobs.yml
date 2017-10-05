@@ -4,46 +4,11 @@ jobs:
     steps:
       - IN: dv-image
         pull: false
-        versionName: latest
-        versionNumber: 0
-      - IN: dv-opts
-      - IN: trigger-dv-man
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
-    flags:
-      - dv
-
-  - name: dv-dep-test
-    type: deploy
-    on_start:
-      - NOTIFY: slackNotification
-    steps:
-      - IN: env-test
-        versionName: latest
-        versionNumber: 0
-        pull: false
-      - TASK: managed
-        deployMethod: upgrade
-    on_failure:
-      - NOTIFY: slackNotification
-
-  - name: box-man
-    type: manifest
-    steps:
-      - OUT: box-image
-      - TASK: managed
-    flags:
-      - box
-    
 
   - name: multi-manifest
     type:  deploy
     steps:
-      - IN: box-man
       - IN: dv-man
-      - IN: env-test
 
   - name: release-one
     type: release
@@ -55,9 +20,7 @@ jobs:
     type: runSh
     steps:
       - IN: release-one
+      - IN: testSshKey
       - TASK:
         - script: ls
-        - script: echo $FOO
-    on_success:
-      - NOTIFY: slackNotification
-      - NOTIFY: myEmail
+        - script: echo $testSshKey_INTEGRATION_NAME
