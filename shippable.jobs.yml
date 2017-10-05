@@ -20,7 +20,7 @@ jobs:
   - name: infra-provision
     type: runSh
     steps:
-      - IN: release-one
+      - IN: dv-man
       - IN: testSshKey
       - TASK:
         - script: ls
