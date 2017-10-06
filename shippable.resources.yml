@@ -29,3 +29,7 @@ resources:
     type: integration
     integration: test-sshKey
 
+  - name: oldSshKey
+    type: integration
+    integration: old-ssh
+    
