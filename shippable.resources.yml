@@ -55,13 +55,6 @@ resources:
       memory: 64
       cpuShares: 512
 
-  - name: env-test
-    type: cluster
-    integration: deepika-ecs
-    pointer:
-      sourceName : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
-
   - name: env-ddc
     type: cluster
     integration: deepika-ddc
