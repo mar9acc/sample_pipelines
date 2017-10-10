@@ -1,35 +1,28 @@
 resources:
   - name: dv-image
     type: image
-    integration: deepika-docker
+    integration: ship4-docker
     pointer:
       sourceName: "library/nginx"
     seed:
       versionName: latest
 
-  - name: slackNotification
-    type: notification
-    integration: deepika-slack
-    pointer:
-      recipients:
-        - "#deepika-test"
+ 
 
   - name: myEmail
     type: notification
     pointer:
       method: email
       recipients:
-        -  "deepika@shippable.com"
+        -  "sreya@shippable.com"
 
-  - name: dockerIntegration
-    type: integration
-    integration: deepika-docker
+  
 
  # - name: testSshKey
  #   type: integration
  #   integration: test-sshKey
 
-  - name: oldSshKey
+  - name: newssh
     type: integration
-    integration: old-ssh-1
+    integration: newssh
     
