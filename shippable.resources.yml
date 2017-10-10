@@ -25,9 +25,9 @@ resources:
     type: integration
     integration: deepika-docker
 
-  - name: testSshKey
-    type: integration
-    integration: test-sshKey
+ # - name: testSshKey
+ #   type: integration
+ #   integration: test-sshKey
 
   - name: oldSshKey
     type: integration
