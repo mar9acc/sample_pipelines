@@ -21,7 +21,7 @@ jobs:
     type: runSh
     steps:
       - IN: dv-man
-      - IN: oldSshKey
+      - IN: newssh
       - TASK:
         - script: echo "integration name------>-"$OLDSSHKEY_NAME
         - script: echo "public key------>-"$OLDSSHKEY_INTEGRATION_PUBLICKEY
