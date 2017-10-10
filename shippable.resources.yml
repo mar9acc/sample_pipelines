@@ -31,5 +31,5 @@ resources:
 
   - name: oldSshKey
     type: integration
-    integration: old-ssh
+    integration: old-ssh-1
     
