@@ -46,11 +46,11 @@ jobs:
         - script: echo "<-------key path----->"
         - script: echo $PEMKEY_PATH
         
-  - name: pemkeytest
+  - name: pemkeytest1
     type: runSh
     steps:
       - IN: dv-man
-      - IN: pemkeytest
+      - IN: pemkeytest1
       - TASK:
         - script: cd IN/
         - script: cd pemkeytest/
