@@ -53,12 +53,12 @@ jobs:
       - IN: pemkeytest1
       - TASK:
         - script: cd IN/
-        - script: cd pemkeytest/
+        - script: cd pemkeytest1/
         - script: ls -a
-        - script: cat pemkeytest_key.pem
+        - script: cat pemkeytest1_key.pem
         - script: echo "<---------INTEGRATION NAME------>"
-        - script: echo $PEMKEYTEST_NAME
+        - script: echo $PEMKEYTEST1_NAME
         - script: echo "<---------key------>"
-        - script: echo $PEMKEYTEST_INTEGRATION_KEY
+        - script: echo $PEMKEYTEST1_INTEGRATION_KEY
         - script: echo "<-------key path----->"
-        - script: echo $PEMKEYTEST_PATH
+        - script: echo $PEMKEYTEST1_PATH
