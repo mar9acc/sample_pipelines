@@ -46,7 +46,7 @@ jobs:
         - script: echo "<-------key path----->"
         - script: echo $PEMKEY_PATH
         
-  - name: pemkeytest1
+  - name: N1
     type: runSh
     steps:
       - IN: dv-man
