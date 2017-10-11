@@ -23,6 +23,7 @@ jobs:
       - IN: dv-man
       - IN: newssh
       - IN: ssh
+      - IN: keytest
       - TASK:
         - script: echo "integration name------>-"$NEWSSH_NAME
         - script: echo "public key------>-"$NEWSSH_INTEGRATION_PUBLICKEY
@@ -34,6 +35,11 @@ jobs:
         - script: echo "private key----->-"$SSH_INTEGRATION_PRIVATEKEY
         - script: echo "public key path----->-"$SSH_PUBLIC_KEY_PATH
         - script: echo "private key path------->-"$SSH_PRIVATE_KEY_PATH
+        - script: echo "integration name------>-"KEYTEST_NAME
+        - script: echo "public key------>-"$KEYTEST_INTEGRATION_PUBLICKEY
+        - script: echo "private key----->-"$KEYTEST_INTEGRATION_PRIVATEKEY
+        - script: echo "public key path----->-"$KEYTEST_PUBLIC_KEY_PATH
+        - script: echo "private key path------->-"$KEYTEST_PRIVATE_KEY_PATH
   - name: pem
     type: runSh
     steps:
