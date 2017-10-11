@@ -52,13 +52,13 @@ jobs:
       - IN: dv-man
       - IN: pemkeytest1
       - TASK:
-        - script: cd IN/
-        - script: cd pemkeytest/
+       # - script: cd IN/
+       # - script: cd pemkeytest/
         - script: ls -a
-        - script: cat pemkeytest_key.pem
-        - script: echo "<---------INTEGRATION NAME------>"
-        - script: echo $PEMKEYTEST_NAME
-        - script: echo "<---------key------>"
-        - script: echo $PEMKEYTEST_INTEGRATION_KEY
-        - script: echo "<-------key path----->"
-        - script: echo $PEMKEYTEST_PATH
+      #  - script: cat pemkeytest_key.pem
+      #  - script: echo "<---------INTEGRATION NAME------>"
+      #  - script: echo $PEMKEYTEST_NAME
+      #  - script: echo "<---------key------>"
+     #   - script: echo $PEMKEYTEST_INTEGRATION_KEY
+     #   - script: echo "<-------key path----->"
+     #   - script: echo $PEMKEYTEST_PATH
