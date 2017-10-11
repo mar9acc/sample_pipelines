@@ -45,3 +45,20 @@ jobs:
         - script: echo $PEMKEY_INTEGRATION_KEY
         - script: echo "<-------key path----->"
         - script: echo $PEMKEY_PATH
+        
+  - name: pemkeytest
+    type: runSh
+    steps:
+      - IN: dv-man
+      - IN: pemkeytest
+      - TASK:
+        - script: cd IN/
+        - script: cd pemkeytest/
+        - script: ls -a
+        - script: cat pemkeytest_key.pem
+        - script: echo "<---------INTEGRATION NAME------>"
+        - script: echo $PEMKEYTEST_NAME
+        - script: echo "<---------key------>"
+        - script: echo $PEMKEYTEST_INTEGRATION_KEY
+        - script: echo "<-------key path----->"
+        - script: echo $PEMKEYTEST_PATH
