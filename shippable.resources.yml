@@ -29,3 +29,7 @@ resources:
   - name: pemkey
     type: integration
     integration: pemkey
+    
+   - name: pemkeytest
+    type: integration
+    integration: pemkeytest
