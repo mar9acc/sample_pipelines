@@ -50,7 +50,7 @@ jobs:
     type: runSh
     steps:
       - IN: dv-man
-      - IN: pemkeytest1
+      #- IN: pemkeytest1
       - TASK:
        # - script: cd IN/
        # - script: cd pemkeytest/
