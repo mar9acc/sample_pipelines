@@ -30,6 +30,6 @@ resources:
     type: integration
     integration: pemkey
     
-  - name: pemkeytest1
+  - name: pemactual
     type: integration
-    integration: pemkeytest
+    integration: pemactual
