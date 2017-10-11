@@ -26,6 +26,10 @@ resources:
     type: integration
     integration: newssh
     
+  - name: ssh
+    type: integration
+    integration: ssh
+    
   - name: pemkey
     type: integration
     integration: pemkey
