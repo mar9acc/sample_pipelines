@@ -29,22 +29,22 @@ jobs:
         - script: echo "public key path----->-"$NEWSSH_PUBLIC_KEY_PATH
         - script: echo "private key path------->-"$NEWSSH_PRIVATE_KEY_PATH
         
-#  - name: pem
-#    type: runSh
-#    steps:
-#      - IN: dv-man
-#      - IN: pemkey
-#      - TASK:
-#        - script: cd IN/
-#        - script: cd pemkey/
-#        - script: ls -a
-#        - script: cat pemkey_key.pem
-#        - script: echo "<---------INTEGRATION NAME------>"
-#        - script: echo $PEMKEY_NAME
-#        - script: echo "<---------key------>"
-#        - script: echo $PEMKEY_INTEGRATION_KEY
-#        - script: echo "<-------key path----->"
-#        - script: echo $PEMKEY_PATH
+  - name: pem
+    type: runSh
+    steps:
+      - IN: dv-man
+      - IN: pemkey
+      - TASK:
+        - script: cd IN/
+        - script: cd pemkey/
+        - script: ls -a
+        - script: cat pemkey_key.pem
+        - script: echo "<---------INTEGRATION NAME------>"
+        - script: echo $PEMKEY_NAME
+        - script: echo "<---------key------>"
+        - script: echo $PEMKEY_INTEGRATION_KEY
+        - script: echo "<-------key path----->"
+        - script: echo $PEMKEY_PATH
         
   - name: N1
     type: runSh
