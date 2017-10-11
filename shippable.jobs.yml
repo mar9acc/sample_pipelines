@@ -50,15 +50,15 @@ jobs:
     type: runSh
     steps:
       - IN: dv-man
-      - IN: pemkeytest1
+      - IN: pemactual
       - TASK:
         - script: cd IN/
-        - script: cd pemkeytest1/
+        - script: cd pemactual/
         - script: ls -a
-        - script: cat pemkeytest1_key.pem
+        - script: cat pemactual_key.pem
         - script: echo "<---------INTEGRATION NAME------>"
-        - script: echo $PEMKEYTEST1_NAME
+        - script: echo $PEMACTUAL_NAME
         - script: echo "<---------key------>"
-        - script: echo $PEMKEYTEST1_INTEGRATION_KEY
+        - script: echo $PEMACTUAL_INTEGRATION_KEY
         - script: echo "<-------key path----->"
-        - script: echo $PEMKEYTEST1_PATH
+        - script: echo $PEMACTUAL_PATH
